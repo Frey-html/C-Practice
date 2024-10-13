@@ -1,0 +1,51 @@
+# 忽略 VSCode 工作区配置文件
+.vscode/
+.lcpr_data
+
+# 忽略编译输出的二进制文件（如可执行文件）
+*.exe
+*.out
+*.app
+
+# 忽略编译时生成的中间文件
+*.obj
+*.o
+*.a
+*.lib
+*.so
+*.dll
+
+# 忽略 C++ 调试相关文件
+*.gch
+*.pch
+
+# 忽略日志文件和临时文件
+*.log
+*.tmp
+*.swp
+
+# CMake 生成的文件和目录
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# 忽略构建目录
+/build/
+/dist/
+/Debug/
+/Release/
+
+# 忽略特定操作系统生成的文件
+# MacOS
+.DS_Store
+# Windows
+Thumbs.db
+desktop.ini
+# Linux
+*.d
+
+# 忽略用户环境配置文件
+*.user
+*.suo
+*.sln
