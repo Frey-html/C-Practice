@@ -1,0 +1,1 @@
+gcc test.c skiplist.c -o test.exe
