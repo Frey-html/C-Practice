@@ -5,15 +5,15 @@
             "includePath": [
                 "${workspaceFolder}/**"
             ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE"
-            ],
-            "compilerPath": "C:\\mingw64\\bin\\g++.exe",
+            "defines": [],
+            "compilerPath": "C:/mingw64/bin/g++.exe",  // 配置你的编译器路径
             "cStandard": "c11",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "windows-gcc-x64"
+            "cppStandard": "c++20",  // 根据需要调整为c++11、c++17等
+            "intelliSenseMode": "gcc-x64",  // 根据你的系统选择合适的模式
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,  // 限制符号解析，提升速度
+                "databaseFilename": ""
+            }
         }
     ],
     "version": 4
