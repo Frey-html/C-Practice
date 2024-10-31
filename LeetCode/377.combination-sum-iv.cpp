@@ -1,8 +1,8 @@
 /*
- * @lc app=leetcode.cn id=746 lang=cpp
+ * @lc app=leetcode.cn id=377 lang=cpp
  * @lcpr version=30204
  *
- * [746] 使用最小花费爬楼梯
+ * [377] 组合总和 Ⅳ
  */
 
 
@@ -27,15 +27,8 @@ using namespace std;
 // @lc code=start
 class Solution {
 public:
-    int minCostClimbingStairs(vector<int>& cost) {
-        vector<int> minCost(cost.size() + 1);
-        if(cost.size() <= 2) return min(cost[0], cost[1]); 
-        minCost[0] = 0;
-        minCost[1] = 0;
-        for(int i = 2;i <= cost.size();i++){
-            minCost[i] = min(minCost[i-1] + cost[i-1], minCost[i-2] + cost[i-2]);
-        }
-        return minCost.back();
+    int combinationSum4(vector<int>& nums, int target) {
+        
     }
 };
 // @lc code=end
@@ -44,11 +37,11 @@ public:
 
 /*
 // @lcpr case=start
-// [10,15,20]\n
+// [1,2,3]\n4\n
 // @lcpr case=end
 
 // @lcpr case=start
-// [1,100,1,1,1,100,1,1,100,1]\n
+// [9]\n3\n
 // @lcpr case=end
 
  */
