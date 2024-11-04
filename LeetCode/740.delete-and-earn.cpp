@@ -1,8 +1,8 @@
 /*
- * @lc app=leetcode.cn id=377 lang=cpp
+ * @lc app=leetcode.cn id=740 lang=cpp
  * @lcpr version=30204
  *
- * [377] 组合总和 Ⅳ
+ * [740] 删除并获得点数
  */
 
 
@@ -27,17 +27,8 @@ using namespace std;
 // @lc code=start
 class Solution {
 public:
-    int combinationSum4(vector<int>& nums, int target) {
-        vector<unsigned> ans(target + 1, 0);
-        ans[0] = 1;
-        for(int i = 1;i <= target;i++){
-            for(int x : nums){
-                if(x <= i){
-                    ans[i] += ans[i - x];
-                }
-            }
-        } 
-        return ans[target];
+    int deleteAndEarn(vector<int>& nums) {
+        
     }
 };
 // @lc code=end
@@ -46,11 +37,11 @@ public:
 
 /*
 // @lcpr case=start
-// [1,2,3]\n4\n
+// [3,4,2]\n
 // @lcpr case=end
 
 // @lcpr case=start
-// [9]\n3\n
+// [2,2,3,3,3,4]\n
 // @lcpr case=end
 
  */
