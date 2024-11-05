@@ -28,7 +28,31 @@ using namespace std;
 class Solution {
 public:
     int deleteAndEarn(vector<int>& nums) {
-        
+        unordered_map<int, int> numsInHash;
+        vector<int> numsInVec;
+        for(int x : nums){
+            if(numsInHash.find(x) == numsInHash.end()){
+                numsInVec.push_back(x);
+            }
+            numsInHash[x] += x;
+        }
+
+        sort(numsInVec.begin(), numsInVec.end(), [](const int & a, const int & b)->bool {
+            return a <= b;
+        });
+
+        int length = numsInVec.back();
+        vector<unsigned int> result(length + 1);
+        if(numsInHash.find(1) != numsInHash.end()){
+            nums[1] = numsInHash[1];
+        }
+
+        for(int i = 2; i <= length;i++){
+            if(numsInHash.find(i) != numsInHash.end()){
+                result[i] = max(result[i-1], result[i-2] + numsInHash[i]);
+            }
+        }
+        return result.back();
     }
 };
 // @lc code=end
